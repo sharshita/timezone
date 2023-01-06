@@ -40,7 +40,7 @@ class TimezoneServices {
     $country = $config->get('country');
     $city = $config->get('city');
     $todaydate = \Drupal::time()->getCurrentTime();
-    $currenttime = $this->date_formatter->format($todaydate, 'custom', 'h:i A  l, jS F Y', $time);
+    $currenttime = $this->date_formatter->format($todaydate, 'custom', 'h:i A', $time);
     $data = ['time'=>$currenttime,
             'city' => $city,
             'country' => $country,
